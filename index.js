@@ -14,7 +14,7 @@ app.get('/api/cai', async (req, res) => {
     try {
         const url = req.query.teks;
         const beta = await characterAI.authenticateWithToken("420378e7dfe5c852331028f0b3de25beda3006f2");
-        const characterId = "ZVUK_CGjEymmyNInVX";
+        const characterId = "ZVUK_CGjEymmyNInVX-0LzsvfnacOEQMIn7fxBZlQkU";
         const chat = await characterAI.createOrContinueChat(characterId);
   const response = await chat.sendAndAwaitResponse(teks, true);
   const clear = response.text;
