@@ -12,8 +12,20 @@
 <button onclick=>/api/fb?url=</button>
   <button onclick=>/api/instagram?url=</button>
   <button onclick=>/api/twitter?url=</button>
-  <button onclick=>/api/cai?teks=</button>
   <button onclick=>/api/youtubemp4?url=</button>
+  <button onclick="getData()">Get Data from API</button>
+
+  <div id="data"></div>
+
+  <script>
+    function getData() {
+      fetch('/api/cai?teks=hai')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('data').innerHTML = JSON.stringify(data);
+        });
+    }
+  </script>
 </body>
                                      </html>
                                
